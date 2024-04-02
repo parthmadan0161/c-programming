@@ -1,0 +1,15 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int a,i,rem,new=0,ori,c=0;
+    printf("enter the number");
+    scanf("%d",&a);
+    ori=a;
+    do{
+    rem=a%10;
+    a=a/10;
+    printf("%d",rem);
+    }while(a>0);
+    return 0;
+}
