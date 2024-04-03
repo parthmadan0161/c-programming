@@ -1,0 +1,25 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+int majority(int arr[])
+{
+    int i,maj,j,a,index;
+    for(i=0;i<12;i++)
+    {
+        maj=0;
+        for(j=0;j<12;j++)
+        if (arr[i]==arr[j])
+        maj++;
+        if(maj>a){
+        a=maj;
+        index=i;
+        }
+    }
+    return(index);
+}
+int main() {
+    int arr[12]={1,2,3,4,3,3,2,2,3,3,3,1},index;
+    index=majority(arr);
+        printf("majority element=%d",arr[index]);
+
+    return 0;
+}
