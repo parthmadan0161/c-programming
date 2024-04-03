@@ -1,0 +1,15 @@
+#include<stdio.h>
+void main()
+{
+    int i,a,c=9,d=0;
+    printf("enter the number");
+    scanf("%d",&a);
+    for(i=1;i<=a;i++)
+    {
+        d=d*10+c;
+        printf("%d",d);
+        if(i!=a)
+        printf("+");
+    }
+    
+}
