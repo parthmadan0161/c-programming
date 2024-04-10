@@ -1,0 +1,25 @@
+
+#include <stdio.h>
+int arraySorted(int arr[], int n)
+{
+	if (n == 1 || n == 0)
+		return 1;
+	if (arr[n - 1] < arr[n - 2])
+		return 0;
+	return arraySorted(arr, n - 1);
+}
+int main()
+{
+	int arr[100],n,i;
+	printf("enter the size of array");
+	scanf("%d",&n);
+	printf("enter the element in array");
+	for(i=0;i<n;i++)
+	scanf("%d",&arr[i]);
+	if (arraySorted(arr, n))
+		printf("Yes\n");
+	else
+		printf("No\n");
+
+	return 0;
+}
