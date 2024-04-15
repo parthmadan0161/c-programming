@@ -21,3 +21,30 @@ int main()
 
 	return 0;
 }
+
+
+
+
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||ANOTHER METHOD WITH RECURSSION||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\
+
+#include <stdio.h>
+int add(int arr[], int n, int sum)
+{
+	if (n == 0)
+		return sum;
+		else
+		return (add(arr,n-1,(sum+arr[n-1])));
+}
+int main()
+{
+	int arr[100],n,i,sum,result=0;
+	printf("enter the size of array\n");
+	scanf("%d",&n);
+	printf("enter the element in array\n");
+	for(i=0;i<n;i++)
+	scanf("%d",&arr[i]);
+	sum=add(arr,n,result);
+	printf("sum=%d",sum);
+	return 0;
+}
