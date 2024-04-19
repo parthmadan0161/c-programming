@@ -1,0 +1,23 @@
+#include<stdio.h>
+int *arraypass(int n)
+{
+    static int a[100];
+    int i;
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    return (a);
+}
+void display(int *p,int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    printf("%d\n",*(p+i));
+}
+void main()
+{
+    int *p,n;
+    scanf("%d",&n);
+    p=arraypass(n);
+    *(p+1)=4;
+    display(p,n);
+}
